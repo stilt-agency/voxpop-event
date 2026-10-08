@@ -1,0 +1,120 @@
+{
+  "_comment": "Written by the intake (reference/intake.md). Copy to <project>/project.json. Relative paths resolve against the project folder; absolute paths are used as-is. Keep answered-but-unused keys rather than deleting them: the next job for this client starts from this file.",
+
+  "client": "Example Corp",
+  "event": "ExampleON Sydney 2026",
+  "audience": "client and own social",
+  "approver": "first name, role",
+  "delivery_due": "2026-11-14",
+  "embargo": null,
+
+  "output": {
+    "dir": "D:/Projects/ExampleON/out",
+    "also_copy_to": null,
+    "name_pattern": "{event_slug}-VoxPop-{ratio}-{programme}{treatments}.mp4",
+    "version_prefix": null,
+    "ratios": ["9x16"],
+    "treatments": ["plain", "lt", "cap", "ltcap"]
+  },
+
+  "footage": {
+    "source_dirs": ["D:/Projects/ExampleON/cards"],
+    "format": "3840x2160 25p HEVC",
+    "separate_audio": null,
+    "interviewer_audible": true,
+    "exclusions": ["clip P1023001: no release"]
+  },
+
+  "colours": {
+    "primary": "#00D15F",
+    "black": "#000000",
+    "white": "#FFFFFF",
+    "muted": "#CDCDCD"
+  },
+
+  "fonts": {
+    "dir": "assets/BrandFont",
+    "weights": {
+      "400": "BrandFont-Regular.ttf",
+      "500": "BrandFont-Medium.ttf",
+      "600": "BrandFont-SemiBold.ttf",
+      "700": "BrandFont-Bold.ttf",
+      "800": "BrandFont-Bold.ttf"
+    },
+    "fallback": null,
+    "caption_weight": 600
+  },
+
+  "logo": {
+    "main": "assets/logo/logo_main.svg",
+    "reverse": "assets/logo/logo_reverse.svg",
+    "clear_space_ratio": 0.55
+  },
+
+  "watermark": {
+    "_note": "Omit the block for none.",
+    "path": "assets/logo/logo_reverse.svg",
+    "corner": "top-right",
+    "width_px": 190,
+    "margin_px": 48,
+    "opacity": 0.85,
+    "whole_programme": true
+  },
+
+  "device": {
+    "path": "assets/device/brand_mark.png",
+    "opacity": 0.13
+  },
+
+  "assets": {
+    "backdrop": "assets/backdrop_loop.mov",
+    "outro": "assets/producer_outro.mov",
+    "music": "assets/music_bed.mp3"
+  },
+
+  "backdrop_offsets": {"01_title": 2.0, "01_title2": 22.0, "99_end": 40.0, "_opener": 11.0},
+
+  "copy": {
+    "title_eyebrow": "VOICES FROM THE FLOOR",
+    "title_eyebrow_alt": "MORE VOICES FROM THE FLOOR",
+    "title_lines": ["ExampleON", "Sydney 2026"],
+    "strapline": ["One line of context,", "two at the most."],
+    "end_text": "ExampleON Sydney 2026",
+    "end_cta": null,
+    "question_eyebrow": "Question"
+  },
+
+  "questions": [
+    {"id": "q1", "text": "What brought you here this year?"},
+    {"id": "q2", "text": "So what happens next?"}
+  ],
+
+  "captions": {
+    "deliver": ["burned", "srt"],
+    "style": "tidied",
+    "third_source": "descript",
+    "descript_destination": "Client Drive / project name",
+    "spelling": "en-AU",
+    "fixes": [
+      ["\\bExample ?Corp\\b", "ExampleCorp"],
+      ["\\bcloud\\b(?= or ChatGPT)", "Claude"]
+    ],
+    "locked_wording": [
+      "Keynote with a capital K",
+      "pentest as one word"
+    ]
+  },
+
+  "audio": {"target_lufs": -16.0, "music_duck_db": 19.0},
+
+  "tools": {
+    "ffmpeg": "C:/Users/<you>/AppData/Local/Microsoft/WinGet/Packages/Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe/ffmpeg-8.1.1-full_build/bin/ffmpeg.exe",
+    "ffprobe": "C:/Users/<you>/AppData/Local/Microsoft/WinGet/Packages/Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe/ffmpeg-8.1.1-full_build/bin/ffprobe.exe",
+    "whisper": "C:/tools/whisper-xxl/Faster-Whisper-XXL/faster-whisper-xxl.exe"
+  },
+
+  "open_items": [
+    {"item": "Reverse logo cut", "owner": "client", "blocks": "question cards"},
+    {"item": "Titles for two speakers", "owner": "client", "blocks": "name plates"}
+  ]
+}
